@@ -1,25 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
+import React, {Component} from 'react';
 
 export default class NashyNum extends Component {
 
-  static propTypes = {
+    constructor(props) {
+        super(props);
+    }
 
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <div>MyComponent</div>
-    );
-  }
+    render() {
+        return (<div>MyComponent</div>);
+    }
 
 }
