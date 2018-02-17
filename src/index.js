@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
-import LevelPage from './containers/LevelPage';
-import GameOverPage from './containers/GameOverPage';
-import {
-    BrowserRouter as Router,
-    Route,
-} from 'react-router-dom';
 
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-const App = () =>
-  <Router basename={process.env.PUBLIC_URL + '/'}>
-    <div>
-      <Route exact path="/" component={LevelPage} />
-      <Route exact path="/gameover" component={GameOverPage} />
-    </div>
-  </Router>
+import registerServiceWorker from 'registerServiceWorker';
+import LevelPage from 'containers/LevelPage';
+import GameOverPage from 'containers/GameOverPage';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'index.css';
+
+const App = () => <Router basename={process.env.PUBLIC_URL + '/'}>
+    <Switch>
+        <Route exact="exact" path="/" component={LevelPage}/>
+        <Route exact="exact" path="/gameover" component={GameOverPage}/>
+    </Switch>
+</Router>
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
