@@ -11,8 +11,8 @@ import 'index.css';
 
 const App = () => <Router basename={process.env.PUBLIC_URL + '/'}>
     <Switch>
-        <Route exact="exact" path="/" component={LevelPage}/>
-        <Route exact="exact" path="/gameover" component={GameOverPage}/>
+        <Route exact path="/" component={LevelPage}/>
+        <Route exact path="/gameover" component={GameOverPage}/>
     </Switch>
 </Router>
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import NashyNum from 'components/NashyNum';
 import NashyInput from 'components/NashyInput';
+import NashyButton from 'components/NashyButton';
 
 export default class LevelPage extends Component {
     constructor(props) {
@@ -15,9 +16,8 @@ export default class LevelPage extends Component {
     render() {
         return (<div>
             <NashyNum></NashyNum>
-
-            {this.state.listOfRandoms.map((n) => <NashyInput number={n}/>)}
-
+            {this.state.listOfRandoms.map((n, i) => <NashyInput key={i} number={n}/>)}
+            <NashyButton>Check</NashyButton>
         </div>);
     }
 
