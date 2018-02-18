@@ -1,13 +1,31 @@
-import React, {Component} from 'react';
+import styled, {keyframes} from 'styled-components';
 
-export default class NashyNum extends Component {
+const zoomIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+`
 
-    constructor(props) {
-        super(props);
+export default styled.div `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: ${zoomIn} 1s forwards;
+
+    h1, h2 {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 3.6em;
     }
 
-    render() {
-        return (<div>MyComponent</div>);
+    h2 {
+        font-size: 0.9em;
     }
-
-}
+`

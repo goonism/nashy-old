@@ -1,17 +1,33 @@
-import React, {Component} from 'react';
+import styled from 'styled-components';
 
-export default class NashyInput extends Component {
+export default styled.input `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    constructor(props) {
-        super(props);
+    text-align: center;
 
-        this.state = {};
+    border-radius: 5px;
+
+    opacity: 0.5;
+
+    transition: 0.3s width;
+    height: 3em;
+    width: 2em;
+
+    color: white;
+
+    background: gray;
+
+    border: none;
+
+    :hover {
+        opacity: 1;
     }
 
-    render() {
-        return (<div>
-            NashyInput
-        </div>);
+    :focus,
+    :active {
+        width: 80vw;
     }
-
-}
+`

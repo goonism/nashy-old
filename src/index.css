@@ -1,5 +1,4 @@
 body {
-    font-family: 'Comfortaa', cursive;
     background: white;
     display: flex;
     flex-direction: column;
@@ -9,6 +8,10 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+body, input, button {
+    font-family: 'Comfortaa', cursive;
 }
 
 /*Gradient color gathered from https://uigradients.com/*/
@@ -66,4 +69,17 @@ body {
     background: linear-gradient(to top, #243B55, #141E30);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     animation: FadeIn 1s forwards;
+}
+
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
